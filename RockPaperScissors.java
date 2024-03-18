@@ -56,13 +56,14 @@ final class RockPaperScissors {
         final String computerChoice =
             computerOptions[random.nextInt(randnumberMax)];
 
-public class RockPaperScissors {
-    // Define constants
-    private static final String rockString = "rock";
-    private static final String paperString = "paper";
-    private static final String scissorsString = "scissors";
+         public class RockPaperScissors {
+        // Define constants
+        private static final String rockString = "rock";
+        private static final String paperString = "paper";
+        private static final String scissorsString = "scissors";
 
-    public String rockPaperScissor(String userInputString, String computerChoice, String tiedOutcome, String lostOutcome, String winOutcome) {
+        public String rockPaperScissor(String userInputString, String computerChoice, 
+        String tiedOutcome, String lostOutcome, String winOutcome) {
         String output = "";
 
         // Process
