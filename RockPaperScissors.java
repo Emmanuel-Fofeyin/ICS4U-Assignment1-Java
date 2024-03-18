@@ -1,4 +1,5 @@
 import java.util.Random;
+import java.util.Random;
 import java.util.Scanner;
 
 /**
@@ -11,9 +12,9 @@ import java.util.Scanner;
  */
 public final class RockPaperScissors {
     // Define constants
-    private static final String ROCK_STRING = "rock";  // Constant for "rock"
-    private static final String PAPER_STRING = "paper";  // Constant for "paper"
-    private static final String SCISSORS_STRING = "scissors";  // Constant for "scissors"
+    private static final String ROCK_STRING = "rock"; // Constant for "rock"
+    private static final String PAPER_STRING = "paper"; // Constant for "paper"
+    private static final String SCISSORS_STRING = "scissors"; // Constant for "scissors"
 
     // Private constructor to prevent instantiation
     private RockPaperScissors() {
@@ -32,7 +33,8 @@ public final class RockPaperScissors {
      */
     public static String rockPaperScissor(
             final String userInputString, final String computerChoice,
-            final String tiedOutcome, final String lostOutcome, final String winOutcome
+            final String tiedOutcome, final String lostOutcome,
+            final String winOutcome
     ) {
         String output = "";
 
