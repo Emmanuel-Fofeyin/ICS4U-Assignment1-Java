@@ -104,10 +104,13 @@ public final class RockPaperScissors {
                 || userInputString.equals(SCISSORS_STRING)) {
             // Computer chooses rock, paper, or scissors
             final Random random = new Random();
-            final String[] computerOptions = {ROCK_STRING, PAPER_STRING, SCISSORS_STRING};
-            final String computerChoice = computerOptions[random.nextInt(computerOptions.length)];
+            final String[] computerOptions =
+            {ROCK_STRING, PAPER_STRING, SCISSORS_STRING};
+            final String computerChoice =
+            computerOptions[random.nextInt(computerOptions.length)];
 
-            final String output = rockPaperScissor(userInputString, computerChoice, "You tied.", "You lost...", "You won!");
+            final String output = rockPaperScissor(userInputString,
+            computerChoice, "You tied.", "You lost...", "You won!");
             System.out.println(output);
         } else {
             System.out.println("Invalid input.");
