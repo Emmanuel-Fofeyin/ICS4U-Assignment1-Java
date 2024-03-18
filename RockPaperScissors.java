@@ -56,16 +56,21 @@ final class RockPaperScissors {
         final String computerChoice =
             computerOptions[random.nextInt(randnumberMax)];
 
+public class RockPaperScissors {
+    // Define constants
+    private static final String rockString = "rock";
+    private static final String paperString = "paper";
+    private static final String scissorsString = "scissors";
+
+    public String rockPaperScissor(String userInputString, String computerChoice, String tiedOutcome, String lostOutcome, String winOutcome) {
+        String output = "";
+
         // Process
         System.out.println("You choose: " + userInputString);
         System.out.println("The computer choose: " + computerChoice);
         if (userInputString.equals(computerChoice)) {
             output = tiedOutcome;
         } else {
-            final String rockString = "rock";
-            final String paperString = "paper";
-            final String scissorsString = "scissors";
-
             switch (computerChoice) {
                 case rockString:
                     if (userInputString.equals(scissorsString)) {
