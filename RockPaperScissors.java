@@ -11,11 +11,17 @@ import java.util.Scanner;
  */
 public final class RockPaperScissors {
     // Define constants
-    //Represents the string "rock".
+    /**
+    * Represents the string "rock".
+    */
     private static final String ROCK_STRING = "rock";
-    // Represents the string "paper".
+    /**
+    * Represents the string "paper".
+    */
     private static final String PAPER_STRING = "paper";
-    // Represents the string "scissors".
+    /**
+    * Represents the string "scissors".
+    */
     private static final String SCISSORS_STRING = "scissors";
 
     // Private constructor to prevent instantiation
