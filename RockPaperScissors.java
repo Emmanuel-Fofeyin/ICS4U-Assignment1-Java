@@ -107,10 +107,10 @@ public final class RockPaperScissors {
             final String[] computerOptions =
             {ROCK_STRING, PAPER_STRING, SCISSORS_STRING};
             final String computerChoice =
-            computerOptions[random.nextInt(computerOptions.length)];
+                computerOptions[random.nextInt(computerOptions.length)];
 
             final String output = rockPaperScissor(userInputString,
-            computerChoice, "You tied.", "You lost...", "You won!");
+                computerChoice, "You tied.", "You lost...", "You won!");
             System.out.println(output);
         } else {
             System.out.println("Invalid input.");
