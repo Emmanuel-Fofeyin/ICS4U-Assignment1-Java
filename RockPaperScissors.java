@@ -1,34 +1,38 @@
-/*
- * This program creates a game of "rock-paper-scissors"
- * with a computer.
- *
- * @author  Emmanuel.FN
- * @version 1.0
- * @since   2024-03-17
- */
-
 import java.util.Random;
 import java.util.Scanner;
 
-public class RockPaperScissors {
+/**
+ * This program creates a game of "rock-paper-scissors"
+ * with a computer.
+ *
+ * @author Emmanuel.FN
+ * @version 1.0
+ * @since 2024-03-17
+ */
+public final class RockPaperScissors {
     // Define constants
-    private static final String rockString = "rock";
-    private static final String paperString = "paper";
-    private static final String scissorsString = "scissors";
+    private static final String ROCK_STRING = "rock";
+    private static final String PAPER_STRING = "paper";
+    private static final String SCISSORS_STRING = "scissors";
+
+    // Private constructor to prevent instantiation
+    private RockPaperScissors() {
+        throw new IllegalStateException("Utility class");
+    }
 
     /**
-    * This function simulates a game of "rock-paper-scissors".
-    *
-    * @param userInputString  The user's input.
-    * @param computerChoice  The computer's choice.
-    * @param tiedOutcome  The outcome if it's a tie.
-    * @param lostOutcome  The outcome if the user loses.
-    * @param winOutcome  The outcome if the user wins.
-    * @return The outcome of the game.
-    */
+     * This function simulates a game of "rock-paper-scissors".
+     *
+     * @param userInputString The user's input.
+     * @param computerChoice  The computer's choice.
+     * @param tiedOutcome     The outcome if it's a tie.
+     * @param lostOutcome     The outcome if the user loses.
+     * @param winOutcome      The outcome if the user wins.
+     * @return The outcome of the game.
+     */
     public static String rockPaperScissor(
-        String userInputString, String computerChoice,
-        String tiedOutcome, String lostOutcome, String winOutcome
+            final String userInputString, final String computerChoice,
+            final String tiedOutcome, final String lostOutcome, final String winOutcome
     ) {
         String output = "";
 
@@ -39,22 +43,22 @@ public class RockPaperScissors {
             output = tiedOutcome;
         } else {
             switch (computerChoice) {
-                case rockString:
-                    if (userInputString.equals(scissorsString)) {
+                case ROCK_STRING:
+                    if (userInputString.equals(SCISSORS_STRING)) {
                         output = lostOutcome;
                     } else {
                         output = winOutcome;
                     }
                     break;
-                case paperString:
-                    if (userInputString.equals(rockString)) {
+                case PAPER_STRING:
+                    if (userInputString.equals(ROCK_STRING)) {
                         output = lostOutcome;
                     } else {
                         output = winOutcome;
                     }
                     break;
-                case scissorsString:
-                    if (userInputString.equals(paperString)) {
+                case SCISSORS_STRING:
+                    if (userInputString.equals(PAPER_STRING)) {
                         output = lostOutcome;
                     } else {
                         output = winOutcome;
@@ -68,26 +72,26 @@ public class RockPaperScissors {
     }
 
     /**
-    * The starting main() function.
-    *
-    * @param args No args will be used
-    */
-    public static void main(String[] args) {
+     * The starting main() function.
+     *
+     * @param args No args will be used
+     */
+    public static void main(final String[] args) {
         // Input
-        Scanner scanner = new Scanner(System.in);
+        final Scanner scanner = new Scanner(System.in);
         System.out.print("rock, paper, or scissors? (lowercase): ");
-        String userInputString = scanner.nextLine().trim();
+        final String userInputString = scanner.nextLine().trim();
 
         // Error check
-        if (userInputString.equals(rockString)
-            || userInputString.equals(paperString)
-            || userInputString.equals(scissorsString)) {
+        if (userInputString.equals(ROCK_STRING)
+                || userInputString.equals(PAPER_STRING)
+                || userInputString.equals(SCISSORS_STRING)) {
             // Computer chooses rock, paper, or scissors
-            Random random = new Random();
-            final String[] computerOptions = {rockString, paperString, scissorsString};
-            String computerChoice = computerOptions[random.nextInt(computerOptions.length)];
+            final Random random = new Random();
+            final String[] computerOptions = {ROCK_STRING, PAPER_STRING, SCISSORS_STRING};
+            final String computerChoice = computerOptions[random.nextInt(computerOptions.length)];
 
-            String output = rockPaperScissor(userInputString, computerChoice, "You tied.", "You lost...", "You won!");
+            final String output = rockPaperScissor(userInputString, computerChoice, "You tied.", "You lost...", "You won!");
             System.out.println(output);
         } else {
             System.out.println("Invalid input.");
