@@ -25,6 +25,9 @@ public final class RockPaperScissors {
     private static final String SCISSORS_STRING = "scissors";
 
     // Private constructor to prevent instantiation
+    /**
+    * This is for Rock, paper, sissors.
+    */
     private RockPaperScissors() {
         throw new IllegalStateException("Utility class");
     }
