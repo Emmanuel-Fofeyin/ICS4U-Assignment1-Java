@@ -62,6 +62,10 @@ final class RockPaperScissors {
         if (userInputString.equals(computerChoice)) {
             output = tiedOutcome;
         } else {
+            final String rockString = "rock";
+            final String paperString = "paper";
+            final String scissorsString = "scissors";
+
             switch (computerChoice) {
                 case rockString:
                     if (userInputString.equals(scissorsString)) {
