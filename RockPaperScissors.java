@@ -26,7 +26,10 @@ public final class RockPaperScissors {
 
     // Private constructor to prevent instantiation
     /**
-    * This is for Rock, paper, sissors.
+    * Private constructor to prevent instantiation of this utility class.
+    * Throws an IllegalStateException if called.
+    *
+    * @throws IllegalStateException if called, as this class should not be seen.
     */
     private RockPaperScissors() {
         throw new IllegalStateException("Utility class");
