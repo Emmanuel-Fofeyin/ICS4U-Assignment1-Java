@@ -11,9 +11,9 @@ import java.util.Scanner;
  */
 public final class RockPaperScissors {
     // Define constants
-    private static final String ROCK_STRING = "rock";
-    private static final String PAPER_STRING = "paper";
-    private static final String SCISSORS_STRING = "scissors";
+    private static final String ROCK_STRING = "rock";  // Constant for "rock"
+    private static final String PAPER_STRING = "paper";  // Constant for "paper"
+    private static final String SCISSORS_STRING = "scissors";  // Constant for "scissors"
 
     // Private constructor to prevent instantiation
     private RockPaperScissors() {
